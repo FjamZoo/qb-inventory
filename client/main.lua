@@ -256,6 +256,10 @@ RegisterNetEvent('QBCore:Player:SetPlayerData', function(val)
     PlayerData = val
 end)
 
+RegisterNetEvent('QBCore:Client:UpdateObject', function()
+	QBCore = exports['qb-core']:GetCoreObject()
+end)
+
 RegisterNetEvent('inventory:client:CheckOpenState', function(type, id, label)
     local name = QBCore.Shared.SplitStr(label, "-")[2]
     if type == "stash" then
